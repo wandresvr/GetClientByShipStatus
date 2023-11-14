@@ -1,0 +1,8 @@
+
+{
+    "string_connection": "dbname='postgres' user='postgres' password='password' host='localhost' port='5432'",
+    "smtp_server" : "smtp.genericmail.com",
+    "smtp_port" : 587,
+    "smtp_user" : "w.andres.vr@gmail.com",
+    "smtp_passw" : "asdf"
+}
