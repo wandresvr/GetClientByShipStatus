@@ -123,7 +123,9 @@ def main():
 
 
     """Comment if database connection is used"""
-    path = "C:\\Users\\Wilson\\Downloads\\db_envios_challenge.csv" #Alternative for simulate a database
+
+    path = logDirectory = os.path.join(os.path.dirname(os.path.abspath(__file__)), "db_envios_challenge.csv")
+    #path = "C:\\Users\\Wilson\\Downloads\\db_envios_challenge.csv" #Alternative for simulate a database
 
     
 
