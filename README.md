@@ -2,28 +2,28 @@
 
 ## Getting information by shipping status.
 
-This project have as objective to made alerts by the user behaivour.
+This project has as objective to made alerts by the user behavior.
 
-Currently, this have twice ways for gets the information, the firt is thougth a CSV and the other one it is by SQL query, but the last is not working yet.
-If you want to connect by SQL you should following the instruction in the code, where you need comment or uncomment the lines describe in the `main.py`, however you also need to prepare the database connection and the columns they same in the CSV file.
+Currently, this has twice ways for gets the information, the first is though a CSV and the other one it is by SQL query, but the last is not working yet.
+If you want to connect by SQL you should be following the instruction in the code, where you need to comment or uncomment the lines describe in the `main.py`, however you also need to prepare the database connection and the columns the same in the CSV file.
 
 The connection string is in `initParameters.json`, you have to replace the variable the following way:
 
 ```json
 "stringConn" : "dbname='postgres' user='postgres' password='password' host='localhost' port='5432'"
 ```
-The 'OrderQuery' is working, but inactive; also you have to replace the table query with the project table.  
+The 'OrderQuery' is working, but inactive; also, you have to replace the table query with the project table.  
 
-The 'UserQuery' is not working, but this should contain the query for inner join the user data with the shipped order. User data should contain email address and will send a email but you have to configure the email paramenters in `initParameters.json`, the function `alerts.py` is ready for working.
+The 'UserQuery' is not working, but this should contain the query for inner join the user data with the shipped order. User data should contain email address and will send an email, but you have to configure the email parameters in `initParameters.json`, the function `alerts.py` is ready for working.
 
-For another hand if you want run by CSV file, yo don't need modify nothing in `main.py`.
+For another hand, if you want to run by CSV file, you don't need to modify nothing in `main.py`.
 
-## Requeriments
+## Requirements
 
 - Python 3.x
 - Pip
 
-## Instalation:
+## Installation:
 
 1. Clone the repo:
 
@@ -31,7 +31,7 @@ For another hand if you want run by CSV file, yo don't need modify nothing in `m
    git clone https://github.com/wandresvr/TechnicalTest.git
    ```
 
-2. You should find out the `ConfigEnviroment.bat` file, then you run it, this file will create the virtual enviroment called 'PruebaTecWVargas' (Sorry, spanish) and the it will install dependencies in `requirements.txt` file. This is only for windows users, because others OS is not available. I reccomend you create for those with 'Anaconda'.
+2. You should find out the `ConfigEnviroment.bat` file, then you run it, this file will create the virtual environment called 'PruebaTecWVargas' (Sorry, Spanish) and it will install dependencies in `requirements.txt` file. This is only for Windows users, because others OS is not available. I recommend you create for those with 'Anaconda'.
 
 ## Execution:
 
@@ -43,7 +43,7 @@ For another hand if you want run by CSV file, yo don't need modify nothing in `m
 schtasks /create /tn "TaskName" /tr "C:\Path\To\Run\trigger.bat" /sc daily /st HH:mm
 ```
 
-You have to replace the path with the trigger path and put the hours for run it.
+You have to replace the path with the trigger path and put the hours to run it.
 
 # Español:
 
