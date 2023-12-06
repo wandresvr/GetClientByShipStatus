@@ -1,4 +1,4 @@
-# Prueba Técnica
+# Extracción de información baada en pedidos
 
 Este proyecto tiene como finalidad generar alertas basadas en comportamiento de usuario.
 
