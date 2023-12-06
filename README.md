@@ -44,6 +44,7 @@ schtasks /create /tn "TaskName" /tr "C:\Path\To\Run\trigger.bat" /sc daily /st H
 ```
 
 You have to replace the path with the trigger path and put the hours to run it.
+#
 
 # Español:
 
