@@ -1,4 +1,53 @@
-# Extracción de información baada en pedidos
+# English:
+
+## Getting information by shipping status.
+
+This project have as objective to made alerts by the user behaivour.
+
+Currently, this have twice ways for gets the information, the firt is thougth a CSV and the other one it is by SQL query, but the last is not working yet.
+If you want to connect by SQL you should following the instruction in the code, where you need comment or uncomment the lines describe in the `main.py`, however you also need to prepare the database connection and the columns they same in the CSV file.
+
+The connection string is in `initParameters.json`, you have to replace the variable the following way:
+
+```json
+"stringConn" : "dbname='postgres' user='postgres' password='password' host='localhost' port='5432'"
+```
+The 'OrderQuery' is working, but inactive; also you have to replace the table query with the project table.  
+
+The 'UserQuery' is not working, but this should contain the query for inner join the user data with the shipped order. User data should contain email address and will send a email but you have to configure the email paramenters in `initParameters.json`, the function `alerts.py` is ready for working.
+
+For another hand if you want run by CSV file, yo don't need modify nothing in `main.py`.
+
+## Requeriments
+
+- Python 3.x
+- Pip
+
+## Instalation:
+
+1. Clone the repo:
+
+   ```bash
+   git clone https://github.com/wandresvr/TechnicalTest.git
+   ```
+
+2. You should find out the `ConfigEnviroment.bat` file, then you run it, this file will create the virtual enviroment called 'PruebaTecWVargas' (Sorry, spanish) and the it will install dependencies in `requirements.txt` file. This is only for windows users, because others OS is not available. I reccomend you create for those with 'Anaconda'.
+
+## Execution:
+
+1. For to manually run, you need to run the `trigger.bat` file. 
+
+2. for to run by scheduled task, you need type in console the following command:
+
+```bash
+schtasks /create /tn "TaskName" /tr "C:\Path\To\Run\trigger.bat" /sc daily /st HH:mm
+```
+
+You have to replace the path with the trigger path and put the hours for run it.
+
+# Español:
+
+## Extracción de información basada en pedidos.
 
 Este proyecto tiene como finalidad generar alertas basadas en comportamiento de usuario.
 
